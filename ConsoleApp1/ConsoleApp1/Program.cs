@@ -16,9 +16,11 @@ namespace ConsoleApp1
         {
             var names = new string[] { "Michael", "Pam", "Jim", "Dwight", "Angela", "Kevin", "Toby" };
 
-            var query = names.Where(new Func<string, bool>(NoLongerThanFour));
+            var query = names.Where(name => name.Length > 5);
+                //NoLongerThanFour);
+                //new Func<string, bool>(NoLongerThanFour));
 
-            foreach(string item in query)
+            foreach (string item in query)
             {
                 Console.WriteLine(item);
             }
